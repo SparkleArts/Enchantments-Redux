@@ -1,0 +1,113 @@
+{
+  "mod_elements": [
+    {
+      "name": "Steadfast",
+      "type": "enchantment",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steadfast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/enchantment/SteadfastEnchantment.java"
+        ]
+      }
+    },
+    {
+      "name": "SteadfastTrigger",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "steadfast_trigger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/SteadfastTriggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "amount",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ModConfig",
+      "type": "code",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mod_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/ModConfig.java"
+        ]
+      }
+    },
+    {
+      "name": "EnchantmentSteadfastConfig",
+      "type": "code",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "enchantment_steadfast_config",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/EnchantmentSteadfastConfig.java"
+        ]
+      }
+    },
+    {
+      "name": "ConfigRegistries",
+      "type": "code",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "config_registries",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/ConfigRegistries.java"
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "config.enchantmentsplusplus_redux.option.steadfastEnch": "Enchantment: Steadfast",
+      "enchantment.enchantmentsplusplus_redux.steadfast": "Steadfast",
+      "config.enchantmentsplusplus_redux.option.SteadfastDamageModifier": "Base Damage Reduction Modifier",
+      "config.screen.enchantmentsplusplus_redux": "Enchantments++ Redux Config"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "enchantmentsplusplus_redux",
+    "modName": "Enchantments++ Redux",
+    "version": "1.0.0",
+    "author": "Jonas, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "configuration"
+    ],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.enchantmentsplusplusredux",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300336712
+}

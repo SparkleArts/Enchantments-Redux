@@ -1,0 +1,12 @@
+repositories {
+  maven {
+      url = "https://www.cursemaven.com"
+      content {
+          includeGroup "curse.maven"
+      }
+  }
+}
+dependencies {
+    implementation fg.deobf("curse.maven:configuration-444699:4519564")
+}
+

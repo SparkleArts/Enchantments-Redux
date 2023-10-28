@@ -1,0 +1,34 @@
+{
+  "_fv": 47,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Steadfast",
+    "type": "ARMOR",
+    "rarity": "VERY_RARE",
+    "minLevel": 1,
+    "maxLevel": 3,
+    "damageModifier": 0,
+    "compatibleEnchantments": [
+      {
+        "value": "PROTECTION"
+      },
+      {
+        "value": "FIRE_PROTECTION"
+      },
+      {
+        "value": "BLAST_PROTECTION"
+      },
+      {
+        "value": "PROJECTILE_PROTECTION"
+      }
+    ],
+    "excludeEnchantments": true,
+    "compatibleItems": [],
+    "excludeItems": false,
+    "isTreasureEnchantment": true,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": false
+  }
+}
