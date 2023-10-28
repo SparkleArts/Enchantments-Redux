@@ -7,6 +7,6 @@ repositories {
   }
 }
 dependencies {
-    implementation fg.deobf("curse.maven:configuration-444699:4519564")
+    implementation fg.deobf("curse.maven:configuration-444699:4710263")
 }
 
