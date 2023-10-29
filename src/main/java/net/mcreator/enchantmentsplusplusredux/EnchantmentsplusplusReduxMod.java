@@ -26,6 +26,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModMobEffects;
 import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModEnchantments;
 
 import java.util.function.Supplier;
@@ -45,6 +46,7 @@ public class EnchantmentsplusplusReduxMod {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		EnchantmentsplusplusReduxModEnchantments.REGISTRY.register(bus);
+		EnchantmentsplusplusReduxModMobEffects.REGISTRY.register(bus);
 
 	}
 

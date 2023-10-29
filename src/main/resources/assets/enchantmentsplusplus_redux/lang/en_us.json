@@ -1,6 +1,20 @@
 {
-  "config.enchantmentsplusplus_redux.option.steadfastEnch": "Enchantment: Steadfast",
+  "enchantment.enchantmentsplusplus_redux.burning_touch": "Burning Touch",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchDuration": "Effect Duration (in ticks)",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel:help": "Determines at what level the Burning Touch effect begins at enchantment level 1.",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.AcrobatEnch.AcrobatSpeedValue": "Movement Speed Value",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchCooldown:help": "Determines the cooldown time of the burn after the Burning Touch effect has expired.",
+  "enchantmentsplusplus_redux.config.common.EnchCategory": "Enchantments",
+  "effect.enchantmentsplusplus_redux.ench_burning_touch": "Burning Touch",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchCooldown": "Effect Cooldown (in seconds)",
   "enchantment.enchantmentsplusplus_redux.steadfast": "Steadfast",
-  "config.enchantmentsplusplus_redux.option.SteadfastDamageModifier": "Base Damage Reduction Modifier",
-  "config.screen.enchantmentsplusplus_redux": "Enchantments++ Redux Config"
+  "enchantmentsplusplus_redux.config.common.EnchCategory.SteadfastEnch.BaseReductionModifier": "Base Reduction Modifier",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.SteadfastEnch": "Enchantment: Steadfast",
+  "enchantment.enchantmentsplusplus_redux.acrobat": "Acrobat",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch": "Enchantment: Burning Touch",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel": "Effect Level",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.AcrobatEnch.AcrobatSpeedValue:help": "Determines how much additional movement speed you receive.This value is multiplied by the enchantment level.",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchDuration:help": "Determines the Duration of the Burning Touch effect.",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.AcrobatEnch": "Enchantment: Acrobat",
+  "enchantmentsplusplus_redux.config.common.EnchCategory.SteadfastEnch.BaseReductionModifier:help": "Basic damage reduction modifier. This value is multiplied by the enchantment level."
 }

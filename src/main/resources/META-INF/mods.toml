@@ -20,7 +20,13 @@ authors="SparkleArts"
 
 
 [[dependencies.enchantmentsplusplus_redux]]
-    modId="configuration"
+    modId="simpleconfig"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.enchantmentsplusplus_redux]]
+    modId="allmods"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

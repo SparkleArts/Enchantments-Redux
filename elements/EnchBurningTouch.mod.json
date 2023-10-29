@@ -1,0 +1,23 @@
+{
+  "_fv": 47,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Burning Touch",
+    "icon": "ench_burning_touch.png",
+    "color": {
+      "value": -26266,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "EnchBurningTouchOnEffectActiveTick"
+    },
+    "activeTickCondition": {
+      "name": "EnchBurningTouchActiveTickCondition"
+    }
+  }
+}

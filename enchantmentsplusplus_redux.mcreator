@@ -3,6 +3,7 @@
     {
       "name": "Steadfast",
       "type": "enchantment",
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "steadfast",
@@ -36,41 +37,137 @@
       }
     },
     {
-      "name": "ModConfig",
+      "name": "CommonConfig",
       "type": "code",
-      "sortid": 2,
       "compiles": true,
       "locked_code": true,
-      "registry_name": "mod_config",
+      "registry_name": "common_config",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/ModConfig.java"
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/CommonConfig.java"
         ]
       }
     },
     {
-      "name": "EnchantmentSteadfastConfig",
-      "type": "code",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "enchantment_steadfast_config",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/EnchantmentSteadfastConfig.java"
-        ]
-      }
-    },
-    {
-      "name": "ConfigRegistries",
-      "type": "code",
+      "name": "Acrobat",
+      "type": "enchantment",
       "sortid": 5,
       "compiles": true,
-      "locked_code": true,
-      "registry_name": "config_registries",
+      "locked_code": false,
+      "registry_name": "acrobat",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/ConfigRegistries.java"
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/enchantment/AcrobatEnchantment.java"
+        ]
+      }
+    },
+    {
+      "name": "AcrobatTrigger",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "acrobat_trigger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/AcrobatTriggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BurningTouch",
+      "type": "enchantment",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning_touch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/enchantment/BurningTouchEnchantment.java"
+        ]
+      }
+    },
+    {
+      "name": "BurningTouchTrigger",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "burning_touch_trigger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/BurningTouchTriggerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnchBurningTouch",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ench_burning_touch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/potion/EnchBurningTouchMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "EnchBurningTouchActiveTickCondition",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ench_burning_touch_active_tick_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/EnchBurningTouchActiveTickConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "amplifier",
+            "type": "number"
+          },
+          {
+            "name": "duration",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "EnchBurningTouchOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ench_burning_touch_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/EnchBurningTouchOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       }
     }
@@ -79,10 +176,24 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "config.enchantmentsplusplus_redux.option.steadfastEnch": "Enchantment: Steadfast",
+      "enchantment.enchantmentsplusplus_redux.burning_touch": "Burning Touch",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchDuration": "Effect Duration (in ticks)",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel:help": "Determines at what level the Burning Touch effect begins at enchantment level 1.",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.AcrobatEnch.AcrobatSpeedValue": "Movement Speed Value",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchCooldown:help": "Determines the cooldown time of the burn after the Burning Touch effect has expired.",
+      "enchantmentsplusplus_redux.config.common.EnchCategory": "Enchantments",
+      "effect.enchantmentsplusplus_redux.ench_burning_touch": "Burning Touch",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchCooldown": "Effect Cooldown (in seconds)",
       "enchantment.enchantmentsplusplus_redux.steadfast": "Steadfast",
-      "config.enchantmentsplusplus_redux.option.SteadfastDamageModifier": "Base Damage Reduction Modifier",
-      "config.screen.enchantmentsplusplus_redux": "Enchantments++ Redux Config"
+      "enchantmentsplusplus_redux.config.common.EnchCategory.SteadfastEnch.BaseReductionModifier": "Base Reduction Modifier",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.SteadfastEnch": "Enchantment: Steadfast",
+      "enchantment.enchantmentsplusplus_redux.acrobat": "Acrobat",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch": "Enchantment: Burning Touch",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel": "Effect Level",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.AcrobatEnch.AcrobatSpeedValue:help": "Determines how much additional movement speed you receive.This value is multiplied by the enchantment level.",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.BurningTouchEnch.BurningTouchDuration:help": "Determines the Duration of the Burning Touch effect.",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.AcrobatEnch": "Enchantment: Acrobat",
+      "enchantmentsplusplus_redux.config.common.EnchCategory.SteadfastEnch.BaseReductionModifier:help": "Basic damage reduction modifier. This value is multiplied by the enchantment level."
     }
   },
   "foldersRoot": {
@@ -102,7 +213,8 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "configuration"
+      "simpleconfig",
+      "allmods"
     ],
     "currentGenerator": "forge-1.18.2",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
