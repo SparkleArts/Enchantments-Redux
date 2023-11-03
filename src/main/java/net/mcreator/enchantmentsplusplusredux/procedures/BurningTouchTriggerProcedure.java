@@ -14,7 +14,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 
 import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModMobEffects;
 import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModEnchantments;
-import net.mcreator.enchantmentsplusplusredux.CommonConfig;
+import net.mcreator.enchantmentsplusplusredux.ServerConfig;
 
 import javax.annotation.Nullable;
 
@@ -38,8 +38,8 @@ public class BurningTouchTriggerProcedure {
 		double PotionLevel = 0;
 		double BurningTouchLevel = 0;
 		double BurningTouchDuration = 0;
-		BasePotionLevel = CommonConfig.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel;
-		BurningTouchDuration = CommonConfig.EnchCategory.BurningTouchEnch.BurningTouchDuration;
+		BasePotionLevel = ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel;
+		BurningTouchDuration = ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchDuration;
 		if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.BURNING_TOUCH.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)) != 0) {
 			PotionLevel = BasePotionLevel
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.BURNING_TOUCH.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY));

@@ -12,7 +12,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModEnchantments;
-import net.mcreator.enchantmentsplusplusredux.CommonConfig;
+import net.mcreator.enchantmentsplusplusredux.ServerConfig;
 
 import javax.annotation.Nullable;
 
@@ -40,7 +40,7 @@ public class SteadfastTriggerProcedure {
 		double DamageReductionModifier = 0;
 		double BaseReductionModifier = 0;
 		BaseModifier = 1;
-		BaseReductionModifier = CommonConfig.EnchCategory.SteadfastEnch.BaseReductionModifier;
+		BaseReductionModifier = ServerConfig.EnchCategory.SteadfastEnch.BaseReductionModifier;
 		if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)) != 0) {
 			DamageReductionModifier = BaseReductionModifier
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY));
