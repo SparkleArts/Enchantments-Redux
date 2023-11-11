@@ -9,7 +9,7 @@ public class EnchBurningTouchOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		double BurningTouchCooldown = 0;
-		BurningTouchCooldown = ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchCooldown;
+		BurningTouchCooldown = (int) ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchCooldown;
 		entity.setSecondsOnFire((int) BurningTouchCooldown);
 	}
 }

@@ -22,6 +22,7 @@ import endorh.simpleconfig.api.SimpleConfig;
 import net.minecraft.network.chat.TextComponent;
 
 import static endorh.simpleconfig.api.ConfigBuilderFactoryProxy.*;
+import endorh.simpleconfig.api.annotation.Bake;
 
 @ConfigClass(modId = EnchantmentsplusplusReduxMod.MODID, type = SimpleConfig.Type.SERVER)
 public class ServerConfig {
@@ -40,13 +41,9 @@ public class ServerConfig {
 					.add("BurningTouchDuration", number(100).min(100).max(200).slider())
 					.add("BurningTouchCooldown", number(10).min(5).max(30).slider())
 				)
-				.n(group("CriticalEnch")
-					.add("CriticalMod", enable(false))
-					.add("CriticalChance", number(0.2).range(0.10, 0.20).editable(g -> g.getGUIBoolean("CriticalMod")).slider(v -> new TextComponent(String.format("%.0f %%", v * 100))))
-					.add("CriticalDamage", number(0.2).range(0.10, 0.20).slider(v -> new TextComponent(String.format("%.0f %%", v * 100))))
-				)
 			);
 	}
+	
 	@Bind public static class EnchCategory {
 		// Steadfast Enchantment
 		@Bind public static class SteadfastEnch {
@@ -63,13 +60,6 @@ public class ServerConfig {
 			@Bind public static int BurningTouchBaseLevel;
 			@Bind public static int BurningTouchDuration;
 			@Bind public static int BurningTouchCooldown;
-		}
-
-		// Critical Enchantment
-		@Bind public static class CriticalEnch {
-			@Bind public static boolean CriticalMod;
-			@Bind public static double CriticalChance;
-			@Bind public static double CriticalDamage;
 		}
 	}
 }

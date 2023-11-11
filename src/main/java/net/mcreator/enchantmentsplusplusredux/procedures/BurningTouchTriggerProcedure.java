@@ -34,12 +34,12 @@ public class BurningTouchTriggerProcedure {
 	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		double BasePotionLevel = 0;
 		double PotionLevel = 0;
 		double BurningTouchLevel = 0;
+		double BasePotionLevel = 0;
 		double BurningTouchDuration = 0;
-		BasePotionLevel = ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel;
-		BurningTouchDuration = ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchDuration;
+		BasePotionLevel = (int) ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel;
+		BurningTouchDuration = (int) ServerConfig.EnchCategory.BurningTouchEnch.BurningTouchDuration;
 		if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.BURNING_TOUCH.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)) != 0) {
 			PotionLevel = BasePotionLevel
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.BURNING_TOUCH.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY));

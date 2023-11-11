@@ -160,68 +160,6 @@
       }
     },
     {
-      "name": "CritDamage",
-      "type": "attribute",
-      "sortid": 16,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crit_damage",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "CritChance",
-      "type": "attribute",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "crit_chance",
-      "metadata": {
-        "files": []
-      }
-    },
-    {
-      "name": "CriticalModification",
-      "type": "procedure",
-      "sortid": 17,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "critical_modification",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/CriticalModificationProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
-            "name": "damagemodifier",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "Critical",
-      "type": "enchantment",
-      "sortid": 18,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "critical",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/enchantment/CriticalEnchantment.java"
-        ]
-      }
-    },
-    {
       "name": "ServerConfig",
       "type": "code",
       "sortid": 20,
@@ -231,48 +169,6 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/enchantmentsplusplusredux/ServerConfig.java"
-        ]
-      }
-    },
-    {
-      "name": "CriticalTrigger",
-      "type": "procedure",
-      "sortid": 21,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "critical_trigger",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/CriticalTriggerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "GlobalMapManager",
-      "type": "procedure",
-      "sortid": 22,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "global_map_manager",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/enchantmentsplusplusredux/procedures/GlobalMapManagerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       }
     },
@@ -288,34 +184,14 @@
           "src/main/java/net/mcreator/enchantmentsplusplusredux/ClientConfig.java"
         ]
       }
-    },
-    {
-      "name": "EnchDebugModeCommandFix",
-      "type": "procedure",
-      "sortid": 24,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ench_debug_mode_command_fix",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "command",
-            "type": "string"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [
     {
-      "name": "enableCriticalMod",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
+      "name": "SteadfastCalculatedModifier",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [],
@@ -328,13 +204,13 @@
       "enchantmentsplusplus_redux.config.server.EnchCategory.CriticalEnch.CriticalDamage:help": "Set the initial Damage for a Crit. It multiplies with the enchantment level.",
       "enchantmentsplusplus_redux.config.server.EnchCategory.BurningTouchEnch.BurningTouchCooldown:help": "Determines the cooldown time of the burn after the Burning Touch effect has expired.",
       "enchantmentsplusplus_redux.config.client.ClientCategory": "Client",
-      "attribute.enchantmentsplusplus_redux.crit_damage": "Crit Damage",
       "enchantmentsplusplus_redux.config.server.EnchCategory.BurningTouchEnch": "Enchantment: Burning Touch",
+      "gui.enchantmentsplusplus_redux.ench_debug_mode_overlay.label_enchantment": "Enchantment:",
       "enchantmentsplusplus_redux.config.server.EnchCategory.SteadfastEnch.BaseReductionModifier:help": "Basic damage reduction modifier. This value is multiplied by the enchantment level.",
       "enchantmentsplusplus_redux.config.server.EnchCategory.CriticalEnch.CriticalDamage": "Critical Damage",
       "enchantmentsplusplus_redux.config.server.EnchCategory.BurningTouchEnch.BurningTouchDuration": "Effect Duration (in ticks)",
       "enchantmentsplusplus_redux.config.server.EnchCategory.CriticalEnch.CriticalMod": "Enable Critical Mod",
-      "attribute.enchantmentsplusplus_redux.crit_chance": "Crit Chance",
+      "gui.enchantmentsplusplus_redux.ench_debug_mode_overlay.label_current_value": "Current Value:",
       "enchantment.enchantmentsplusplus_redux.burning_touch": "Burning Touch",
       "enchantmentsplusplus_redux.config.client.ClientCategory.EnchDebugMode": "Enable Enchantment Debug Mode",
       "enchantmentsplusplus_redux.config.server.EnchCategory.SteadfastEnch.BaseReductionModifier": "Base Reduction Modifier",
@@ -346,11 +222,11 @@
       "enchantmentsplusplus_redux.config.server.EnchCategory.SteadfastEnch": "Enchantment: Steadfast",
       "enchantmentsplusplus_redux.config.server.EnchCategory.CriticalEnch.CriticalMod:help": "It enables the Crit Chance Mechanic.",
       "enchantmentsplusplus_redux.config.server.EnchCategory.AcrobatEnch.AcrobatSpeedValue:help": "Determines how much additional movement speed you receive.This value is multiplied by the enchantment level.",
-      "enchantment.enchantmentsplusplus_redux.critical": "Critical",
       "enchantmentsplusplus_redux.config.server.EnchCategory.CriticalEnch": "Enchantment: Critical",
       "enchantment.enchantmentsplusplus_redux.acrobat": "Acrobat",
       "enchantmentsplusplus_redux.config.server.EnchCategory.BurningTouchEnch.BurningTouchBaseLevel:help": "Determines at what level the Burning Touch effect begins at enchantment level 1.",
       "enchantmentsplusplus_redux.config.server.EnchCategory": "Enchantments",
+      "gui.enchantmentsplusplus_redux.ench_debug_mode_overlay.label_level": "Level:",
       "enchantmentsplusplus_redux.config.server.EnchCategory.AcrobatEnch.AcrobatSpeedValue": "Movement Speed Value"
     }
   },
@@ -369,7 +245,10 @@
     "serverSideOnly": false,
     "requiredMods": [],
     "dependencies": [
-      "simpleconfig"
+      "simpleconfig",
+      "curios",
+      "geckolib3",
+      "dungeons_libraries"
     ],
     "dependants": [],
     "mcreatorDependencies": [

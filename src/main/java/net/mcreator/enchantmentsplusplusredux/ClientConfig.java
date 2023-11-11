@@ -30,7 +30,7 @@ import endorh.simpleconfig.api.SimpleConfig;
 @ConfigClass(modId = EnchantmentsplusplusReduxMod.MODID, type = SimpleConfig.Type.CLIENT)
 @OnlyIn(Dist.CLIENT)
 public class ClientConfig {
-	static Supplier<Boolean> enchDebug = () -> false;
+	static Supplier<Boolean> enchDebug = () -> true;
 
 	@Bind
 	public static SimpleConfigBuilder build(SimpleConfigBuilder builder) {

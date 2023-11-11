@@ -26,6 +26,24 @@ authors="SparkleArts"
     ordering="NONE"
     side="BOTH"
 [[dependencies.enchantmentsplusplus_redux]]
+    modId="curios"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.enchantmentsplusplus_redux]]
+    modId="geckolib3"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.enchantmentsplusplus_redux]]
+    modId="dungeons_libraries"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.enchantmentsplusplus_redux]]
     modId="allmods"
     mandatory=false
     versionRange="[0,)"

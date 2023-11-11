@@ -7,12 +7,10 @@ import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.TextComponent;
 
 import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModEnchantments;
 import net.mcreator.enchantmentsplusplusredux.ServerConfig;
@@ -38,7 +36,7 @@ public class AcrobatTriggerProcedure {
 		if (entity == null)
 			return;
 		double AcrobatInitialSpeed = 0;
-		AcrobatInitialSpeed = ServerConfig.EnchCategory.AcrobatEnch.AcrobatSpeedValue;
+		AcrobatInitialSpeed = (double) ServerConfig.EnchCategory.AcrobatEnch.AcrobatSpeedValue;
 		if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.ACROBAT.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)) != 0) {
 			if (!(((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED)
 					.hasModifier((new AttributeModifier(UUID.fromString("50b99ec1-e214-4c2a-9642-7b5a144c1d59"), "acrobat_speed", (AcrobatInitialSpeed
@@ -48,8 +46,6 @@ public class AcrobatTriggerProcedure {
 						.addTransientModifier((new AttributeModifier(UUID.fromString("50b99ec1-e214-4c2a-9642-7b5a144c1d59"), "acrobat_speed", (AcrobatInitialSpeed
 								* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.ACROBAT.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY))),
 								AttributeModifier.Operation.ADDITION)));
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent(("Current Movement Speed: " + ((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED).getValue())), true);
 		} else {
 			((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED)
 					.removeModifier((new AttributeModifier(UUID.fromString("50b99ec1-e214-4c2a-9642-7b5a144c1d59"), "acrobat_speed", (AcrobatInitialSpeed

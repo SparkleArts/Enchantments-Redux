@@ -16,9 +16,9 @@ repositories {
   }
 }
 dependencies {
-    compileOnly "endorh.simpleconfig:simpleconfig-1.18.2:1.0.2:api"
+    compileOnly "endorh.simpleconfig:simpleconfig-1.18.2:1.0.5:api"
 
-    runtimeOnly fg.deobf("endorh.simpleconfig:simpleconfig-1.18.2:1.0.2")
+    runtimeOnly fg.deobf("endorh.simpleconfig:simpleconfig-1.18.2:1.0.5")
 }
 
 def extraModsDir = 'extra-mods-1.18.2'

@@ -11,6 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.enchantmentsplusplusredux.network.EnchantmentsplusplusReduxModVariables;
 import net.mcreator.enchantmentsplusplusredux.init.EnchantmentsplusplusReduxModEnchantments;
 import net.mcreator.enchantmentsplusplusredux.ServerConfig;
 
@@ -40,27 +41,55 @@ public class SteadfastTriggerProcedure {
 		double DamageReductionModifier = 0;
 		double BaseReductionModifier = 0;
 		BaseModifier = 1;
-		BaseReductionModifier = ServerConfig.EnchCategory.SteadfastEnch.BaseReductionModifier;
+		BaseReductionModifier = (double) ServerConfig.EnchCategory.SteadfastEnch.BaseReductionModifier;
 		if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY)) != 0) {
 			DamageReductionModifier = BaseReductionModifier
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY));
 			CalculatedModifier = BaseModifier - DamageReductionModifier;
 			_event.setAmount((float) CalculatedModifier);
+			{
+				double _setval = CalculatedModifier;
+				entity.getCapability(EnchantmentsplusplusReduxModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SteadfastCalculatedModifier = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		} else if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY)) != 0) {
 			DamageReductionModifier = BaseReductionModifier
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY));
 			CalculatedModifier = BaseModifier - DamageReductionModifier;
 			_event.setAmount((float) CalculatedModifier);
+			{
+				double _setval = CalculatedModifier;
+				entity.getCapability(EnchantmentsplusplusReduxModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SteadfastCalculatedModifier = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		} else if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY)) != 0) {
 			DamageReductionModifier = BaseReductionModifier
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY));
 			CalculatedModifier = BaseModifier - DamageReductionModifier;
 			_event.setAmount((float) CalculatedModifier);
+			{
+				double _setval = CalculatedModifier;
+				entity.getCapability(EnchantmentsplusplusReduxModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SteadfastCalculatedModifier = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		} else if (EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY)) != 0) {
 			DamageReductionModifier = BaseReductionModifier
 					* EnchantmentHelper.getItemEnchantmentLevel(EnchantmentsplusplusReduxModEnchantments.STEADFAST.get(), (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY));
 			CalculatedModifier = BaseModifier - DamageReductionModifier;
 			_event.setAmount((float) CalculatedModifier);
+			{
+				double _setval = CalculatedModifier;
+				entity.getCapability(EnchantmentsplusplusReduxModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.SteadfastCalculatedModifier = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }
